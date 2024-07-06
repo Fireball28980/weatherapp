@@ -1,0 +1,70 @@
+@import "variables";
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 70vh;
+
+  &__spinner {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+  }
+
+  &__text {
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+  }
+
+  &__circle-1 {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    border: solid 0.3rem $background;
+    border-right: $spinnercolor 0.3rem solid;
+    animation: spinner 1.5s infinite;
+  }
+
+  &__circle-2 {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    border: solid 0.3rem $background;
+    border-right: $spinnercolor 0.3rem solid;
+    animation: spinner 1.5s 200ms infinite;
+  }
+
+  &__circle-3 {
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: solid 0.3rem $background;
+    border-right: $spinnercolor 0.3rem solid;
+    animation: spinner 1.5s 350ms infinite;
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    border-right-color: $text_color;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,29 @@
+@import "variables";
+
+.current-weather {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-shadow: $text_shadow;
+
+  &__location {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  &__country {
+    font-size: 0.5rem;
+  }
+
+  &__current-temperature {
+    margin: 0.5rem 0;
+    font-size: 4.5rem;
+    font-weight: 200;
+  }
+
+  &__condition {
+    margin-bottom: 0.25rem;
+  }
+}
