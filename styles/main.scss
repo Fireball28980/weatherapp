@@ -8,6 +8,11 @@
   margin: 0;
   padding: 0;
 }
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
 body {
   @include largedisplay {
     background-color: lighten($background, 10);
