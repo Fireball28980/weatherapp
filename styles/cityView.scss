@@ -1,6 +1,17 @@
 @import "mixin";
 @import "variables";
 
+.actionbar {
+  display: flex;
+  justify-content: space-between;
+
+  &__back {
+    width: 2.5rem;
+    filter: drop-shadow($text_shadow);
+    cursor: pointer;
+  }
+}
+
 .current-weather {
   margin-top: 2rem;
   display: flex;
@@ -92,5 +103,20 @@
 
   &__icon {
     width: 2.5rem;
+  }
+}
+
+.ministats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.ministat {
+  @include card();
+
+  &__value {
+    margin: 1rem 0;
+    font-size: 1.5rem;
   }
 }

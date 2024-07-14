@@ -2,6 +2,7 @@
 @import "cityView";
 @import "variables";
 @import "spinner";
+@import "mainmenu";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 * {
@@ -37,5 +38,12 @@ body {
     overflow: auto;
     border-radius: $border-radius;
     box-shadow: $box_shadow;
+  }
+
+  &.show-background {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      var(--detail-condition-image);
+    background-size: cover;
+    background-position: center;
   }
 }

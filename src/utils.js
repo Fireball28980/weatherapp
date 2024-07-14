@@ -37,3 +37,18 @@ export function getDayOfWeek(date) {
 
   return days[dateObj.getDay()];
 }
+
+export function formatUSTime(time) {
+  const isAM = time.includes("AM");
+
+  const timeGermHours = time.split(" ")[0];
+
+  if (isAM) {
+    return timeGermHours;
+  }
+
+  const [hour, minutes] = timeGermHours.split(":");
+
+  const newHour = Number(hour) + 12;
+  return newHour + ":" + minutes;
+}
